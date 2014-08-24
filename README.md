@@ -55,7 +55,9 @@ Here's a field by field description of the changes I made:
 * highest gust speed, average wind speed: same as above
 
 
-**wind_directions.csv** : added csv file (and corresponding db table) to map wind direction degrees to compass directions, for convenience
+**wind_directions.csv** :
+
+* added csv file (and corresponding db table) to map wind direction degrees to compass directions, for convenience
 
 
 **all**:
@@ -66,6 +68,14 @@ Here's a field by field description of the changes I made:
 * translated original Spanish to English
 
 
+units of numeric fields:
+
+* temperature:		degrees Celsius
+* precipitation:	millimeters|liters per square metre
+* pressure:			millibars|hectopascals
+* wind speed:		kilometres per hour
+* lat,long:			decimal degrees
+* wind direction:	degrees from north (clockwise)
 
 License
 -------
