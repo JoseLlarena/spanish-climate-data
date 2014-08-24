@@ -31,20 +31,19 @@ Here's a field by field description of the changes I made:
 
 **stations.csv** (description of each weather station):
 
-indisinop:	id, removed as redundant
-lat,long:	converted from degrees, minutes, seconds to [decimal degrees](http://en.wikipedia.org/wiki/Decimal_degrees)
-place:		replaced commas with colons and removed inverted commas
-region:		added Spanish region each stations is in
+* indisinop:	id, removed as redundant
+* lat,long:	converted from degrees, minutes, seconds to [decimal degrees](http://en.wikipedia.org/wiki/Decimal_degrees)
+* place:		replaced commas with colons and removed inverted commas
+* region:		added Spanish region each stations is in
+
 
 **spanish_daily.csv**:
 
 * place, province, altitude:	removed, redundant as present in stations file
 * average temperature:	removed , redundant as derived from min and max
 * times of max and min temperature and pressure and gust speed: removed as too detail for most analyses
-* precipitation: replaced the string 'trace' with .05, half way between 0 and .1, the minimum quantity non-zero recorded
-* also replaced string 'Acum' with empty, unsure what this is meant to be ( presumably 'Accumulated')
-* direction of strongest gust: converted from tens of degree to degrees
-* also there were some fields with values 99 and 88, outside the allowed range 0-36, that appear to mark days where gust direction was variable
+* precipitation: replaced the string 'trace' with .05, half way between 0 and .1, the minimum quantity non-zero recorded, also replaced string 'Acum' with empty, unsure what this is meant to be ( presumably 'Accumulated')
+* direction of strongest gust: converted from tens of degree to degrees, also there were some fields with values 99 and 88, outside the allowed range 0-36, that appear to mark days where gust direction was variable
 * highest gust speed, average wind speed: converted from m/s to km/hr
 
 
@@ -56,15 +55,16 @@ region:		added Spanish region each stations is in
 * highest gust speed, average wind speed: same as above
 
 
-All files:
+**wind_directions.csv** : added csv file (and corresponding db table) to map wind direction degrees to compass directions, for convenience
+
+
+**all**:
 
 * converted to utf-8 from the original latin-1 encoding
 * replaced continental decimal point , to .
 * replaced field separator ; with ,
 * translated original Spanish to English
 
-
-**wind_directions.csv** : added csv file (and corresponding db table) to map wind direction degrees to compass directions, for convenience
 
 
 License
@@ -75,7 +75,7 @@ permissive MIT-style one. My translation of the Spanish original:
 
 
 
-'''
+```
 The collection and processing of meteorological information, the result of
 scientific and technical work by the State Meteorological Agency
  (AEMET), in line with scientific and technological progress,
@@ -99,7 +99,7 @@ available to the public on this server.
 
 AEMET does not guarantee the full presentation of data on a continuous basis on the server,
 also it reserves the right to modify, add or delete information contained thereon.
-'''
+```
 
 
 
