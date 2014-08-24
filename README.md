@@ -1,4 +1,4 @@
-Spanish Climate data
+Spanish Climate Data
 ====================
 
 
@@ -6,15 +6,15 @@ What's this?
 ------------
 
 It's a lightly processed version of the daily and monthly summaries climate dataset released by the Spanish metoffice ([AEMET](http://www.aemet.es))
-during 2011 and up until November 2012. It contains basic weather observations like precipitation and temperature for 114 Spanish weather stations for
+during 2011 and up until November 2012. It includes basic weather observations like precipitation and temperature for 114 Spanish weather stations for
 the period between 1920 and 2012, in a format that makes it easier to use for data analysis.
 
 This dataset was available free of charge during 2011 and most of 2012 but due to a change in government policy it's now only accessible for a fee, see [here]
 (https://sede.aemet.gob.es/AEMET/en/GestionPeticiones/solicitudes) for how to access an updated version of these data, subject to charge.
 
 The original raw data this dataset is derived from is available [here](http://usuarios.meteored.com/fotosusuarios/vigorro/series.zip).
-Its a copy hosted by a trusted member of the Spanish stormchaser community. I cannot 100% guarantee its integrity or provenance, however myself and others
-who have made use of it have found no issues so far.
+Its a copy hosted by a [trusted member](http://foro.tiempo.com/las-series-climatologicas-de-aemet-en-un-click-hasta-septiembre-de-2012-t139231.0.html)
+ of the Spanish stormchaser community. I can't 100% guarantee its integrity or provenance, however myself and others who have made use of it have found no issues so far.
 
 
 What else?
@@ -29,42 +29,42 @@ Details
 
 Here's a field by field description of the changes I made:
 
-stations.csv (description of each weather station):
+**stations.csv** (description of each weather station):
 
 indisinop:	id, removed as redundant
 lat,long:	converted from degrees, minutes, seconds to [decimal degrees](http://en.wikipedia.org/wiki/Decimal_degrees)
 place:		replaced commas with colons and removed inverted commas
 region:		added Spanish region each stations is in
 
-spanish_daily.csv:
+**spanish_daily.csv**:
 
-place, province, altitude:	removed, redundant as present in stations file
-average temperature:	removed , redundant as derived from min and max
-times of max and min temperature and pressure and gust speed: removed as too detail for most analyses
-precipitation: replaced the string 'trace' with .05, half way between 0 and .1, the minimum quantity non-zero recorded
-also replaced string 'Acum' with empty, unsure what this is meant to be ( presumably 'Accumulated')
-direction of strongest gust: converted from tens of degree to degrees
-also there were some fields with values 99 and 88, outside the allowed range 0-36, that appear to mark days where gust direction was variable
-highest gust speed, average wind speed: converted from m/s to km/hr
+* place, province, altitude:	removed, redundant as present in stations file
+* average temperature:	removed , redundant as derived from min and max
+* times of max and min temperature and pressure and gust speed: removed as too detail for most analyses
+* precipitation: replaced the string 'trace' with .05, half way between 0 and .1, the minimum quantity non-zero recorded
+* also replaced string 'Acum' with empty, unsure what this is meant to be ( presumably 'Accumulated')
+* direction of strongest gust: converted from tens of degree to degrees
+* also there were some fields with values 99 and 88, outside the allowed range 0-36, that appear to mark days where gust direction was variable
+* highest gust speed, average wind speed: converted from m/s to km/hr
 
 
-spanish_monthly.csv:
+**spanish_monthly.csv**:
 
-place, province, altitude:	same as above
-times of max and min temperature, pressure, precipitation, highest wind speed : removed as too detail for most analyses
-direction of strongest gust: same as above
-highest gust speed, average wind speed: same as above
+* place, province, altitude:	same as above
+* times of max and min temperature, pressure, precipitation, highest wind speed : removed as too detail for most analyses
+* direction of strongest gust: same as above
+* highest gust speed, average wind speed: same as above
 
 
 All files:
 
-converted to utf-8 from the original latin-1 encoding
-replaced continental decimal point , to .
-replaced field separator ; with ,
-translated original Spanish to English
+* converted to utf-8 from the original latin-1 encoding
+* replaced continental decimal point , to .
+* replaced field separator ; with ,
+* translated original Spanish to English
 
 
-wind_directions.csv : added csv file (and corresponding db table) to map wind direction degrees to compass directions, for convenience
+**wind_directions.csv** : added csv file (and corresponding db table) to map wind direction degrees to compass directions, for convenience
 
 
 License
