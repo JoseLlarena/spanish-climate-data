@@ -32,7 +32,7 @@ Here's a field by field description of the changes I made:
 **stations.csv** (description of each weather station):
 
 * indisinop:	id, removed as redundant
-* lat,long:	converted from degrees, minutes, seconds to [decimal degrees](http://en.wikipedia.org/wiki/Decimal_degrees)
+* lat,long:		converted from degrees, minutes, seconds to [decimal degrees](http://en.wikipedia.org/wiki/Decimal_degrees)
 * place:		replaced commas with colons and removed inverted commas
 * region:		added Spanish region each stations is in
 
@@ -68,11 +68,11 @@ Here's a field by field description of the changes I made:
 * translated original Spanish to English
 
 
-units of numeric fields:
+**units**:
 
 * temperature:		degrees Celsius
-* precipitation:	millimeters|liters per square metre
-* pressure:			millibars|hectopascals
+* precipitation:	millimeters/liters per square metre
+* pressure:			millibars/hectopascals
 * wind speed:		kilometres per hour
 * lat,long:			decimal degrees
 * wind direction:	degrees from north (clockwise)
@@ -88,12 +88,12 @@ permissive MIT-style one. My translation of the Spanish original:
 ```
 The collection and processing of meteorological information, the result of
 scientific and technical work by the State Meteorological Agency
- (AEMET), in line with scientific and technological progress,
+(AEMET), in line with scientific and technological progress,
 are a form of intellectual property governed by Article
 10 of Royal Legislative Decree 1/1996 of 12 April (Intellectual Property Law).
 AEMET retains ownership and exercise of all rights,
 both moral and economic, which form the exclusive right to
-exploitation and dissemination of such information.
+the exploitation and dissemination of such information.
 
 The information obtained and processed by AEMET is created with the highest
 reliability afforded by current technology. This service is provided
@@ -107,8 +107,9 @@ AEMET declines all responsibility for damages that may
 be incurred by the interpretation and use of the information made
 available to the public on this server.
 
-AEMET does not guarantee the full presentation of data on a continuous basis on the server,
-also it reserves the right to modify, add or delete information contained thereon.
+AEMET does not guarantee the full presentation of data on a continuous basis
+on the server, also it reserves the right to modify, add or delete information
+contained thereon.
 ```
 
 
