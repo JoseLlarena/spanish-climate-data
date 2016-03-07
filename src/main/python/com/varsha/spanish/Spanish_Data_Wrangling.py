@@ -158,7 +158,7 @@ def _zip(data, location):
 if __name__ == '__main__':
 
     OUT_DIR = '../../../../resources/'
-    BASE_DIR = '../../../../resources/'
+    BASE_DIR = 'C:/Users/Jose/Documents/data/wx/series/'
     MONTHLY_DIR, DAILY_DIR = BASE_DIR + 'mensuales/estaciones/', BASE_DIR + 'diarios/estaciones/'
 
     _normalise_stations(read_csv(BASE_DIR + 'maestro.csv', sep=';')).to_csv(OUT_DIR + 'stations.csv', index=False, encoding='utf-8')
